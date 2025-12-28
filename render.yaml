@@ -48,7 +48,6 @@ services:
     - type: web
       name: task-management-frontend
       runtime: static
-      plan: free
       rootDir: frontend
       buildCommand: npm run build
       staticPublishPath: dist
