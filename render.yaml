@@ -45,8 +45,9 @@ services:
           #   value: https://your-frontend.onrender.com
 
     # Frontend Static Site
-    - type: static
+    - type: web
       name: task-management-frontend
+      runtime: static
       plan: free
       buildCommand: cd frontend && npm install && npm run build
       publishPath: frontend/dist
