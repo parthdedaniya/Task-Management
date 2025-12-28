@@ -49,10 +49,12 @@ services:
       name: task-management-frontend
       runtime: static
       plan: free
-      buildCommand: cd frontend && npm install && npm run build
-      publishPath: frontend/dist
+      rootDir: frontend
+      buildCommand: npm run build
+      staticPublishPath: dist
       envVars:
           - key: VITE_API_URL
-            # Update this with your actual backend URL after backend is deployed
-            # Format: https://task-management-backend.onrender.com/api
-            value: https://task-management-backend.onrender.com/api
+            fromService:
+                name: task-management-backend
+                property: url
+                format: https://{{value}}/api
