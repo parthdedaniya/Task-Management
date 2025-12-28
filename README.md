@@ -165,3 +165,31 @@ npm test
 cd frontend
 npm test
 ```
+
+## Deployment
+
+This application can be deployed for free using cloud hosting services. See the deployment guides for detailed instructions:
+
+-   **[DEPLOYMENT_QUICKSTART.md](./DEPLOYMENT_QUICKSTART.md)** - Quick start guide with step-by-step instructions
+-   **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Comprehensive deployment guide with all options
+
+### Quick Deployment Options:
+
+1. **Render + Vercel** (Recommended)
+
+    - Render: Backend + PostgreSQL (Free)
+    - Vercel: Frontend (Free)
+    - Best performance and reliability
+
+2. **Railway** (Easiest)
+
+    - All services in one place
+    - $5 free credit/month
+    - Simplest setup
+
+3. **Render All** (Simplest)
+    - All services on Render
+    - Completely free
+    - Single platform
+
+All options are free for small to medium applications!

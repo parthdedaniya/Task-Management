@@ -1,0 +1,45 @@
+services:
+    # PostgreSQL Database
+    - type: pg
+      name: task-management-db
+      plan: free
+      databaseName: taskmanagement
+      user: taskmanagement
+
+    # Backend API
+    - type: web
+      name: task-management-backend
+      runtime: node
+      plan: free
+      buildCommand: npm install
+      startCommand: npm start
+      envVars:
+          - key: NODE_ENV
+            value: production
+          - key: PORT
+            value: 10000
+          - key: JWT_SECRET
+            generateValue: true
+          - key: DB_HOST
+            fromDatabase:
+                name: task-management-db
+                property: host
+          - key: DB_PORT
+            fromDatabase:
+                name: task-management-db
+                property: port
+          - key: DB_NAME
+            fromDatabase:
+                name: task-management-db
+                property: database
+          - key: DB_USER
+            fromDatabase:
+                name: task-management-db
+                property: user
+          - key: DB_PASSWORD
+            fromDatabase:
+                name: task-management-db
+                property: password
+          # Note: Add CORS_ORIGIN after frontend deployment
+          # - key: CORS_ORIGIN
+          #   value: https://your-frontend.vercel.app
