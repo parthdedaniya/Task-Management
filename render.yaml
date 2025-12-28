@@ -1,11 +1,9 @@
-services:
-    # PostgreSQL Database
-    - type: pg
-      name: task-management-db
-      plan: free
+databases:
+    - name: task-management-db
       databaseName: taskmanagement
-      user: taskmanagement
+      plan: free
 
+services:
     # Backend API
     - type: web
       name: task-management-backend
