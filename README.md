@@ -2,6 +2,19 @@
 
 A simple task management application with authentication, built with React frontend and Node.js/Express backend.
 
+## Live Link
+
+https://task-management-frontend-cs7u.onrender.com/
+
+## Screenshots
+
+<img width="1866" height="967" alt="image" src="https://github.com/user-attachments/assets/7ebeff9c-cf94-41e3-87b0-e5b5bc78ed87" />
+<img width="1866" height="966" alt="image" src="https://github.com/user-attachments/assets/4ea3e9b1-d803-47b3-86bb-1d63576c01ed" />
+<img width="1866" height="965" alt="image" src="https://github.com/user-attachments/assets/69fd3c02-ed1d-464e-a5ec-f8ee5b1c8aa1" />
+<img width="1864" height="968" alt="image" src="https://github.com/user-attachments/assets/90769a29-6982-492f-8dcf-6ba06f32f2cc" />
+<img width="1656" height="963" alt="image" src="https://github.com/user-attachments/assets/112b6ba7-d2bd-455b-b1d1-2a98016c9ec9" />
+
+
 ## Tech Stack
 
 - **Frontend**: React, Tailwind CSS
@@ -165,32 +178,3 @@ npm test
 cd frontend
 npm test
 ```
-
-## Deployment
-
-This application can be deployed for free using cloud hosting services. See the deployment guides for detailed instructions:
-
--   **[DEPLOYMENT_QUICKSTART.md](./DEPLOYMENT_QUICKSTART.md)** - Quick start guide with step-by-step instructions
--   **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Comprehensive deployment guide with all options
-
-### Quick Deployment Options:
-
-1. **Render + Vercel** (Recommended)
-
-    - Render: Backend + PostgreSQL (Free)
-    - Vercel: Frontend (Free)
-    - Best performance and reliability
-
-2. **Railway** (Easiest)
-
-    - All services in one place
-    - $5 free credit/month
-    - Simplest setup
-
-3. **Render All** (Simplest)
-    - All services on Render
-    - Completely free
-    - Single platform
-    - Use `render.yaml` for automatic setup
-
-All options are free for small to medium applications!
