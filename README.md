@@ -191,5 +191,6 @@ This application can be deployed for free using cloud hosting services. See the 
     - All services on Render
     - Completely free
     - Single platform
+    - Use `render.yaml` for automatic setup
 
 All options are free for small to medium applications!

@@ -11,6 +11,7 @@ services:
       name: task-management-backend
       runtime: node
       plan: free
+      rootDir: backend
       buildCommand: npm install
       startCommand: npm start
       envVars:
@@ -40,6 +41,19 @@ services:
             fromDatabase:
                 name: task-management-db
                 property: password
-          # Note: Add CORS_ORIGIN after frontend deployment
+          # CORS_ORIGIN will be set after frontend is deployed
+          # Update this with your frontend URL after deployment
           # - key: CORS_ORIGIN
-          #   value: https://your-frontend.vercel.app
+          #   value: https://your-frontend.onrender.com
+
+    # Frontend Static Site
+    - type: static
+      name: task-management-frontend
+      plan: free
+      buildCommand: cd frontend && npm install && npm run build
+      publishPath: frontend/dist
+      envVars:
+          - key: VITE_API_URL
+            # Update this with your actual backend URL after backend is deployed
+            # Format: https://task-management-backend.onrender.com/api
+            value: https://task-management-backend.onrender.com/api
